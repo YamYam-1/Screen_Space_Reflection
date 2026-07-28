@@ -90,5 +90,4 @@ if (((rayZMax >= sceneZMin) && (rayZMin <= sceneZMax)) || (sceneZMax == 0))
 ---
 
 ## Refrence
-
-Efficient GPU Screen-Space Ray Tracing - Morgan McGuire
+- Efficient GPU Screen-Space Ray Tracing - Morgan McGuire
