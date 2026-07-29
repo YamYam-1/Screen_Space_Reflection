@@ -1,11 +1,9 @@
 # Screen Space Reflection (Unity URP)
 
-URP는 HDRP와 달리 기본적으로 Screen Space Reflection 기능을 제공하지 않습니다.
-
 Efficient GPU Screen-Space Ray Tracing 논문을 참고해
 Unity URP에 맞게 **View Space Ray Marching 기반 Screen Space Reflection(SSR)** 을 구현한 프로젝트입니다.
 
-3D Ray를 Screen Space(2D)로 변환하여 DDA 방식으로 추적하고, Depth Buffer(Z Buffer)를 이용해 반사 지점을 구합니다.
+3D Ray를 Screen Space(2D)로 변환하여 DDA 방식으로 추적하고, Depth Buffer를 이용해 반사 지점을 구합니다.
 
 ---
 
