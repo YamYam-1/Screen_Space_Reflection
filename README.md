@@ -9,7 +9,7 @@ Unity URP에 맞게 **View Space Ray Marching 기반 Screen Space Reflection(SSR
 
 ## Demo
 
-<img width="2560" height="1440" alt="Image" src="https://github.com/user-attachments/assets/2c5fca5b-5244-4b5e-84be-aba34f5b9afa" />
+<img width="500" height="300" alt="Image" src="https://github.com/user-attachments/assets/2c5fca5b-5244-4b5e-84be-aba34f5b9afa" />
 
 ---
 
