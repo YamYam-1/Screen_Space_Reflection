@@ -67,10 +67,6 @@ float4 SSRPassFragment(Varyings input) : SV_Target
     // Screen Space
     P0 = (P0 * float2(0.5, -0.5) + 0.5) * _ScreenParams.xy;
     P1 = (P1 * float2(0.5, -0.5) + 0.5) * _ScreenParams.xy;
-    
-    float xMax = _ScreenParams.x - 0.5, xMin = 0.5;
-    float yMax = _ScreenParams.y - 0.5, yMin = 0.5;
-    float alpha = 0.0;
 
     P1 += distance(P0, P1) < 0.0001 ? float2(0.01, 0.01) : float2(0.0, 0.0);
     float2 delta = P1 - P0;
