@@ -132,7 +132,9 @@ float4 SSRPassFragment(Varyings input) : SV_Target
     }
     
     Q.xy += dQ.xy * stepCount;
-    float3 hitPoint = Q * (1.0 / K);
+    
+    //3D 계산
+    //float3 hitPoint = Q * (1.0 / K);
 
     float2 hitUV = hitPixel / _ScreenParams.xy;
 
