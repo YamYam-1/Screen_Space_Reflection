@@ -92,21 +92,13 @@ float4 SSRPassFragment(Varyings input) : SV_Target
     Q0 += dQ * _Jitter;
     K0 += dK * _Jitter;
     
-    
-    
     float prevZMaxEstimate = cs_Orig.z;
-    
     
     float3 Q = Q0;
     float K = K0;
     float stepCount = 0.0;
     float end =  P1.x * stepDir;
     bool isHit = false;
-
-    float3 prevQ = Q;
-    float prevK = K;
-    float2 prevP = P0;
-    
     
     for (float2 P = P0; (P.x * stepDir <= end) && (stepCount < _Maxsteps); P += dP, Q.z += dQ.z, K += dK, stepCount += 1.0)
     {
