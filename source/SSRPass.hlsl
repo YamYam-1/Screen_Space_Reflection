@@ -79,7 +79,8 @@ float4 SSRPassFragment(Varyings input) : SV_Target
     P1 = useY ? P1.yx : P1.xy;
     
     float stepDir = sign(delta.x), invdx = stepDir / delta.x;
-    
+
+    // 한 픽셀의 변화량
     float3 dQ = (Q1 - Q0) * invdx;
     float dK = (K1 - K0) * invdx;
     float2 dP = float2(stepDir, delta.y * invdx);
@@ -106,7 +107,7 @@ float4 SSRPassFragment(Varyings input) : SV_Target
         
         // ray marching 시작
         float rayZMin = prevZMaxEstimate;
-        float rayZMax = ((dQ.z * 0.5 + Q.z) / (dK * 0.5 + K));
+        float rayZMax = ((dQ.z * 0.5 + Q.z) / (dK * 0.5 + K)); // view space 에서 비교 (2D -> 3D)
         prevZMaxEstimate = rayZMax;
         
         if (rayZMin > rayZMax)
